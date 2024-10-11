@@ -6,10 +6,10 @@ class Envio:
         self.forma_pago = forma_pago
 
     def __repr__(self):
-        return f"Código postal: {self.codigo_postal}, dirección: {self.direccion}, tipo de envío: {self.tipo_envio}, forma de pago: {self.forma_pago}"
+        return f"Código postal: {self.codigo_postal:<9} | País: {self.obtener_pais_destino():<9} | Dirección: {self.direccion:<20} | Tipo de envío: {self.tipo_envio:<1} | Forma de pago: {self.forma_pago:<1}"
     
     def __str__(self):
-        return f"Código postal: {self.codigo_postal}, dirección: {self.direccion}, tipo de envío: {self.tipo_envio}, forma de pago: {self.forma_pago}"
+        return f"Código postal: {self.codigo_postal:<9} | País: {self.obtener_pais_destino():<9} | Dirección: {self.direccion:<20} | Tipo de envío: {self.tipo_envio:<1} | Forma de pago: {self.forma_pago:<1}"
     
     def obtener_pais_destino(self):
         n = len(self.codigo_postal)
